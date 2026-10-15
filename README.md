@@ -1,4 +1,5 @@
-# zhomelab: self-hosted media and photo server
+![Architecture](docs/img/architecture.png)
+# Homelab: self-hosted media and photo server
 
 A small, always-on home server that runs my personal media library and photo backup. It replaced an aging laptop, and it is built to be reproducible, remotely reachable and easy to recover.
 
