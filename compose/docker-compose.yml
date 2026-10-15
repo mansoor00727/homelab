@@ -1,0 +1,21 @@
+# Media server. Intel QuickSync via /dev/dri (UHD 630).
+# Find your render group ID with:  getent group render
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: 1000:1000
+    group_add:
+      - "991"                 # render group ID on this host
+    environment:
+      - TZ=America/Toronto
+      - LIBVA_DRIVER_NAME=iHD # 8th gen and newer Intel; use i965 for older chips
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /opt/appdata/jellyfin/config:/config
+      - /opt/appdata/jellyfin/cache:/cache
+      - /srv/data/media:/data/media:ro
+    ports:
+      - "8096:8096"
+    restart: unless-stopped

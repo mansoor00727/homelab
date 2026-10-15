@@ -1,0 +1,15 @@
+# Needs port 53 free on the host. On Ubuntu, disable the systemd-resolved stub:
+#   /etc/systemd/resolved.conf.d/adguardhome.conf  ->  [Resolve]\nDNSStubListener=no
+#   ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "3001:3000/tcp"       # setup / admin UI
+    volumes:
+      - /opt/appdata/adguard/work:/opt/adguardhome/work
+      - /opt/appdata/adguard/conf:/opt/adguardhome/conf

@@ -1,0 +1,35 @@
+services:
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"
+    volumes:
+      - /opt/appdata/npm/data:/data
+      - /opt/appdata/npm/letsencrypt:/etc/letsencrypt
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/appdata/portainer:/data
+
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=10.0.0.105:3000,dash.diyvideo.app
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /opt/appdata/homepage:/app/config

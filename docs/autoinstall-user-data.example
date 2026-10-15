@@ -1,0 +1,25 @@
+#cloud-config
+# Unattended Ubuntu Server install (autoinstall). Copy to nocloud/user-data (no extension!)
+# and create an empty file named nocloud/meta-data next to it.
+#
+# GRUB: on the installer USB, edit /boot/grub/grub.cfg and append to the `linux` line
+# (NOT the initrd line):   autoinstall ds=nocloud\;s=/cdrom/nocloud/
+#
+# Generate a password hash on a trusted machine (do not paste it into chats or commit it):
+#   openssl passwd -6
+autoinstall:
+  version: 1
+  locale: en_CA.UTF-8
+  keyboard:
+    layout: us
+  identity:
+    hostname: CHANGE-ME
+    username: CHANGE-ME
+    password: "<PASSWORD-HASH-GOES-HERE>"
+  ssh:
+    install-server: true
+    allow-pw: true
+  storage:
+    layout:
+      name: direct
+  shutdown: poweroff     # prevents a reinstall loop when the USB is still plugged in
