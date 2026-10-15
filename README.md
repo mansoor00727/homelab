@@ -86,7 +86,7 @@ My first server was a 2012 laptop. It was fine until it had to play 4K HEVC HDR 
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/zhomelab.git && cd zhomelab/compose
+git clone https://github.com/mansoor00727/homelab.git && cd homelab/compose
 cp .env.example .env
 docker compose up -d                    # Jellyfin + NPM + Portainer + Homepage
 (cd adguard && docker compose up -d)    # DNS (free port 53 first, see the file header)
