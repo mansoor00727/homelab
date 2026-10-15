@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1517"/>
+      <stop offset="1" stop-color="#101a1c"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f7a74"/>
+      <stop offset="1" stop-color="#2b9a92"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7fc4bd"/>
+    </marker>
+    <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa86a"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" rx="0" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="48" y="64" font-size="30" font-weight="700" fill="#e8f1f0">Self-hosted media server</text>
+  <text x="48" y="94" font-size="16" fill="#8fa7a5">Dell OptiPlex 3060 Micro  ·  Ubuntu Server  ·  Docker  ·  private by design</text>
+
+  <!-- LEFT: clients -->
+  <rect x="48" y="170" width="230" height="140" rx="16" fill="#142225" stroke="#2a4548"/>
+  <text x="68" y="202" font-size="14" font-weight="600" fill="#7fc4bd" letter-spacing="1">AT HOME  (LAN)</text>
+  <text x="68" y="238" font-size="18" fill="#e8f1f0">Phone · TV · Laptop</text>
+  <text x="68" y="266" font-size="14" fill="#8fa7a5">Use the home DNS server</text>
+  <text x="68" y="288" font-size="14" fill="#8fa7a5">to reach every service</text>
+
+  <rect x="48" y="440" width="230" height="140" rx="16" fill="#142225" stroke="#2a4548"/>
+  <text x="68" y="472" font-size="14" font-weight="600" fill="#9aa86a" letter-spacing="1">AWAY FROM HOME</text>
+  <text x="68" y="508" font-size="18" fill="#e8f1f0">Phone · Laptop</text>
+  <text x="68" y="536" font-size="14" fill="#8fa7a5">Joined to a private</text>
+  <text x="68" y="558" font-size="14" fill="#8fa7a5">Tailscale network</text>
+
+  <!-- HOST -->
+  <rect x="360" y="120" width="610" height="540" rx="22" fill="#0f1c1e" stroke="#2f6f6a" stroke-width="2"/>
+  <text x="384" y="154" font-size="16" font-weight="700" fill="#e8f1f0">Dell OptiPlex 3060 Micro</text>
+  <text x="384" y="176" font-size="13" fill="#8fa7a5">i5-8400T · 8 GB RAM · Intel UHD 630 · Docker containers</text>
+
+  <!-- AdGuard -->
+  <rect x="384" y="204" width="270" height="86" rx="14" fill="#142225" stroke="#2a4548"/>
+  <text x="404" y="238" font-size="18" font-weight="600" fill="#e8f1f0">AdGuard Home</text>
+  <text x="404" y="264" font-size="14" fill="#8fa7a5">DNS filtering + local names</text>
+
+  <!-- NPM -->
+  <rect x="676" y="204" width="270" height="86" rx="14" fill="#142225" stroke="#2a4548"/>
+  <text x="696" y="238" font-size="18" font-weight="600" fill="#e8f1f0">Nginx Proxy Manager</text>
+  <text x="696" y="264" font-size="14" fill="#8fa7a5">Reverse proxy + TLS</text>
+
+  <!-- Jellyfin hero -->
+  <rect x="676" y="338" width="270" height="108" rx="14" fill="url(#hero)"/>
+  <text x="696" y="374" font-size="20" font-weight="700" fill="#ffffff">Jellyfin</text>
+  <text x="696" y="398" font-size="14" fill="#e3f4f2">Media streaming</text>
+  <text x="696" y="420" font-size="14" fill="#e3f4f2">QuickSync decode · 4K HEVC 10-bit</text>
+
+  <!-- Homepage / Portainer -->
+  <rect x="384" y="338" width="270" height="48" rx="12" fill="#142225" stroke="#2a4548"/>
+  <text x="404" y="368" font-size="16" fill="#e8f1f0">Homepage <tspan fill="#8fa7a5" font-size="13">· dashboard</tspan></text>
+  <rect x="384" y="398" width="270" height="48" rx="12" fill="#142225" stroke="#2a4548"/>
+  <text x="404" y="428" font-size="16" fill="#e8f1f0">Portainer <tspan fill="#8fa7a5" font-size="13">· container admin</tspan></text>
+
+  <!-- Storage -->
+  <rect x="384" y="500" width="270" height="94" rx="14" fill="#101d1f" stroke="#2f6f6a" stroke-dasharray="6 5"/>
+  <text x="404" y="534" font-size="17" font-weight="600" fill="#e8f1f0">256 GB SSD</text>
+  <text x="404" y="558" font-size="14" fill="#8fa7a5">/opt · configs and app data</text>
+
+  <rect x="676" y="500" width="270" height="94" rx="14" fill="#101d1f" stroke="#2f6f6a" stroke-dasharray="6 5"/>
+  <text x="696" y="534" font-size="17" font-weight="600" fill="#e8f1f0">4 TB drive (USB)</text>
+  <text x="696" y="558" font-size="14" fill="#8fa7a5">/srv/data · media library</text>
+
+  <text x="384" y="632" font-size="13" fill="#8fa7a5">Monitored by a one-command health check</text>
+
+  <!-- Internal arrows -->
+  <path d="M811 290 L811 336" stroke="#7fc4bd" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M811 446 L811 498" stroke="#7fc4bd" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- External arrows -->
+  <path d="M278 240 L358 240" stroke="#7fc4bd" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="319" y="224" font-size="11" fill="#7fc4bd" text-anchor="middle">DNS, HTTPS</text>
+
+  <path d="M278 510 L358 510" stroke="#9aa86a" stroke-width="2.5" fill="none" marker-end="url(#arrD)"/>
+  <text x="318" y="496" font-size="12" fill="#9aa86a" text-anchor="middle">Tailscale</text>
+
+  <!-- RIGHT: Cloudflare + no open ports -->
+  <rect x="1010" y="170" width="222" height="120" rx="16" fill="#142225" stroke="#2a4548"/>
+  <text x="1030" y="202" font-size="14" font-weight="600" fill="#9aa86a" letter-spacing="1">CLOUDFLARE DNS</text>
+  <text x="1030" y="232" font-size="16" fill="#e8f1f0">*.diyvideo.app</text>
+  <text x="1030" y="256" font-size="14" fill="#8fa7a5">points to the private</text>
+  <text x="1030" y="276" font-size="14" fill="#8fa7a5">Tailscale address</text>
+  <path d="M1010 230 L972 230" stroke="#9aa86a" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#arrD)"/>
+
+  <rect x="1010" y="440" width="222" height="140" rx="16" fill="#142225" stroke="#2f6f6a"/>
+  <text x="1030" y="474" font-size="14" font-weight="600" fill="#7fc4bd" letter-spacing="1">SECURITY</text>
+  <text x="1030" y="504" font-size="16" fill="#e8f1f0">No open ports</text>
+  <text x="1030" y="528" font-size="14" fill="#8fa7a5">Nothing exposed to the</text>
+  <text x="1030" y="548" font-size="14" fill="#8fa7a5">public internet</text>
+
+  <text x="1232" y="696" font-size="12" fill="#5f7876" text-anchor="end">github.com/mansoor00727/homelab</text>
+</svg>
